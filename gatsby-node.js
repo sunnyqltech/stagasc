@@ -10,7 +10,7 @@ const getOnlyPublished = edges =>
 
 const getData = async () => {
   var a =  axios({
-		url: 'https://shop.australiansportscamps.com.au/graphql',
+		url: 'https://staging-ascstaging.kinsta.cloud/graphql',
 		method: 'post',
 		data: {
 			query: `

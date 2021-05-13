@@ -3,7 +3,7 @@ module.exports = {
     title: `Australian Sports Camps`,
     description: `ASC provides the best sports coaching for Australian children and has done so for over 38 years. We run structured skill-improvement sport camps in Australia ensuring that participants have fun whilst developing a deeper love and enthusiasm for their chosen sport.`,
     author: `@australiansportscamps`,
-	siteUrl: 'https://australiansportscamps.com.au',
+	siteUrl: 'https://staging-ascstaging.kinsta.cloud',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,7 +22,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'shop.australiansportscamps.com.au',
+        baseUrl: 'staging-ascstaging.kinsta.cloud',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
@@ -66,14 +66,14 @@ module.exports = {
       resolve: 'gatsby-plugin-global-context',
       options: {
         context: {
-          BACK_URL: "https://shop.australiansportscamps.com.au"
+          BACK_URL: "https://staging-ascstaging.kinsta.cloud"
         }
       }
     },
 	{       
 		resolve: '@pasdo501/gatsby-source-woocommerce',
 		options: {
-			api: 'shop.australiansportscamps.com.au',
+			api: 'staging-ascstaging.kinsta.cloud',
 			verbose: true,
 			https: true,
 			api_keys: {

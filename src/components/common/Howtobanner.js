@@ -25,7 +25,7 @@ class Howtobanner extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/howto_banner',
+			url: 'https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/howto_banner',
 			method: 'get'
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData[0].Image})

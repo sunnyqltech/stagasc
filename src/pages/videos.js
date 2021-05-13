@@ -24,7 +24,7 @@ class TNC extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/graphql',
+			url: 'https://staging-ascstaging.kinsta.cloud/graphql',
 			method: 'post',
 			data: {
 				query: `
@@ -72,7 +72,7 @@ class TNC extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+						<img alt="" className="icon" src="https://staging-ascstaging.kinsta.cloud/demo.svg" />
 					</div>
 				</div>
 				<section className="Banner-Section">

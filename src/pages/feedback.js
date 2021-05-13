@@ -32,7 +32,7 @@ class PP extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/graphql',
+			url: 'https://staging-ascstaging.kinsta.cloud/graphql',
 			method: 'post',
 			data: {
 				query: `
@@ -98,7 +98,7 @@ class PP extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+						<img alt="" className="icon" src="https://staging-ascstaging.kinsta.cloud/demo.svg" />
 					</div>
 				</div>
 				<section className="Banner-Section">
@@ -125,7 +125,7 @@ class PP extends Component {
 						</div>
 						<div className="Blog-Section-2-data">
 							<Row>
-								<iframe height="1180" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-feedback/" title="description" />
+								<iframe height="1180" width="100%" frameBorder="0" src="https://staging-ascstaging.kinsta.cloud/gravity-feedback/" title="description" />
 							</Row>
 						</div>
 					</Container>

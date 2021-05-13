@@ -27,7 +27,7 @@ class resources extends Component {
 	}
 	
 	componentDidMount() {
-		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/latest";
+		var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/latest";
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData})
 			this.setState({blog: e.data.ResponseData.Blog})
@@ -61,7 +61,7 @@ class resources extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+						<img alt="" className="icon" src="https://staging-ascstaging.kinsta.cloud/demo.svg" />
 					</div>
 				</div>
 				<section className="Banner-Section">

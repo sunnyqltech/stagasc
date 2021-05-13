@@ -23,8 +23,8 @@ class CampPricing extends Component {
 	
 	componentDidMount() {
 		axios({
-			//url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camps',
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camp_pricing',
+			//url: 'https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/camps',
+			url: 'https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/camp_pricing',
 			method: 'get'}).then(res => {
 			this.setState({PageData: res.data.ResponseData.data[0]})
 			
@@ -46,7 +46,7 @@ class CampPricing extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+						<img alt="" className="icon" src="https://staging-ascstaging.kinsta.cloud/demo.svg" />
 					</div>
 				</div>
 				<section className="Banner-Section">
