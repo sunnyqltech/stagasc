@@ -37,12 +37,12 @@ module.exports = {
 		],
       },
     },
-	{
+	/*{
       resolve: "gatsby-plugin-segment-analytics",
       options: {
         writeKey: "fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv",
       },
-    },
+    },*/
 	 {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
@@ -91,7 +91,7 @@ module.exports = {
 			}
 		}
 	},
-	{
+	/*{
     resolve: "gatsby-plugin-google-tagmanager",
     options: {
       id: "GTM-PRK5WQ",
@@ -105,7 +105,7 @@ module.exports = {
       // Defaults to null
       defaultDataLayer: { platform: "gatsby" },
     },
-  },
+  },*/
 	{
     resolve: `gatsby-transformer-remark`,
     options: {
