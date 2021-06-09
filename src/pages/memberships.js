@@ -126,10 +126,11 @@ class Membership extends Component {
 		/*after page load segment hook*/
 		const cookies = new Cookies();
 		var page_name  = 'Viewed Membership Page';
+		var res  = '';
 		var path  = '/memberships/';
 		var url  = 'https://staging-ascstaging.kinsta.cloud//memberships/';
 		if(cookies.get('LOGIN') == 1){
-			var login_name = "demo@demo.com";
+			var login_name = cookies.get('EMAIL');
 		}
 		else{
 			var login_name = "";
@@ -137,7 +138,7 @@ class Membership extends Component {
 		
 		
 		var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/page_view";
-		axios.post(url,{path:path,url:url,user:login_name,page_name:page_name}).then(e => {
+		axios.post(url,{path:path,url:url,user:login_name,page_name:page_name,res:res}).then(e => {
 			console.log("done");
 		})
 		
