@@ -6,6 +6,7 @@ import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import axios from 'axios';
 import { Helmet } from "react-helmet"
+import Cookies from 'universal-cookie';
 
 class Membership extends Component {
 	constructor(props) {
@@ -121,6 +122,25 @@ class Membership extends Component {
 			this.setState({twitter_description: res.data.data.page.seo.twitterDescription})
 			console.log(res);
 		})
+		
+		/*after page load segment hook*/
+		const cookies = new Cookies();
+		var page_name  = 'Viewed Membership Page';
+		var path  = '/memberships/';
+		var url  = 'https://staging-ascstaging.kinsta.cloud//memberships/';
+		if(cookies.get('LOGIN') == 1){
+			var login_name = "demo@demo.com";
+		}
+		else{
+			var login_name = "";
+		}
+		
+		
+		var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/page_view";
+		axios.post(url,{path:path,url:url,user:login_name,page_name:page_name}).then(e => {
+			console.log("done");
+		})
+		
 	}
   
   render() {
