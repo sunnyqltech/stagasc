@@ -49,6 +49,7 @@ class Camps extends Component {
 	
 	render() {
 		const page = this.props.data.allWordpressWpCpt151986;
+		
 		return (
 			<Layout>
 			
@@ -94,7 +95,7 @@ class Camps extends Component {
 				<section className="Sport-details-section-3">
 					<Container>
 						
-							<Campbooking category={page.edges[0].node.acf.product_category} name={page.edges[0].node.title}   />
+							<Campbooking wid={page.edges[0].node.wordpress_id} category={page.edges[0].node.acf.product_category} name={page.edges[0].node.title}   />
 						
 						<p className="font-italic font-medium mb-0 disclaimer_bxsec" >{page.edges[0].node.acf.disclaimer}</p>
                     </Container>

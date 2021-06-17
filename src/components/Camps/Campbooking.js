@@ -21,10 +21,11 @@ class Campbooking extends React.Component{
     };
 	componentDidMount() {
 		var cat = this.props.category;
+		var wid = this.props.wid;
 		var name = this.props.name;
 		this.setState({name: name})
 		
-		var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/cat-products/"+cat;
+		var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/cat-products/"+cat+"?id="+wid;
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData.Camp})
 			this.setState({showInfo: 1})
