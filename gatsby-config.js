@@ -40,7 +40,7 @@ module.exports = {
 	/*{
       resolve: "gatsby-plugin-segment-analytics",
       options: {
-        writeKey: "fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv",
+        writeKey: "ChwGkexA2wJAX5MgI6GCSfBsCsAgHjMN",
       },
     },*/
 	 {
