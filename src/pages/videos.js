@@ -9,6 +9,7 @@ import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import { Helmet } from "react-helmet"
+import Cookies from 'universal-cookie';
 class TNC extends Component {
 	
 	constructor(props) {
