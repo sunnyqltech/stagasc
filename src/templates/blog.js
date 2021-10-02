@@ -21,6 +21,7 @@ import Blogbanner from '../components/common/Blogbanner'
 import LatestPost from '../components/common/LatestPost'
 import { Helmet } from "react-helmet"
 import Cookies from 'universal-cookie';
+import axios from 'axios';
 
 class demopage extends Component {
   
