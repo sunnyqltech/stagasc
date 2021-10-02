@@ -10,6 +10,8 @@ import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import { Helmet } from "react-helmet"
+import Cookies from 'universal-cookie';
+
 class resources extends Component {
 	
 	constructor(props) {
@@ -35,6 +37,28 @@ class resources extends Component {
 			this.setState({flyer: e.data.ResponseData.Flyer})
 			this.setState({showInfo: 1})
 		})
+		
+		
+		/*after page load segment hook*/
+		const cookies = new Cookies();
+		var page_name  = 'Viewed Membership Page';
+		var res  = '';
+		var path  = '/resources/';
+		var url_v  = 'https://asc-stag.netlify.app/resources/';
+		if(cookies.get('LOGIN') == 1){
+			var login_name = cookies.get('EMAIL');
+		}
+		else{
+			var login_name = "";
+		}
+		
+		
+		var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/page_view_res";
+		axios.post(url,{path:path,url:url_v,user:login_name,page_name:page_name,res:res,resourceType:"All"}).then(e => {
+			console.log("done");
+		})
+		
+		
 	}
 	
 	
