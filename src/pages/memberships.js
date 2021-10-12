@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container,Breadcrumb,Row,Col,Card,Image,Button,Accordion} from 'react-bootstrap'
+import {Container,Breadcrumb,Row,Col,Card,Image,Button,Accordion,Button,Modal} from 'react-bootstrap'
 import { Link } from 'gatsby'
 import Layout from "../components/layout"
 import Footer from "../components/common/Footer"
@@ -12,6 +12,9 @@ class Membership extends Component {
 	constructor(props) {
 		super(props);
 		console.log(this.props);
+		 this.modalOpen = this.modalOpen.bind(this);
+        this.modalClose = this.modalClose.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 	
 	state = {
@@ -26,8 +29,28 @@ class Membership extends Component {
 		og_description:"",
 		twitter_card:"",
 		twitter_title:"",
-		twitter_description:""
+		twitter_description:"",
+		isOpen:false
 	}
+	
+	modalOpen(){
+        this.setState({
+            isOpen:true,
+        })
+    }
+    modalClose(){
+        this.setState({
+            isOpen:false,
+        })
+    }
+	
+	handleClick() { 
+		this.setState({
+            isOpen:true,
+        })
+	}
+	
+	
 	handleToggle = (id) => {
         document.querySelectorAll('.card:not(.id'+id+')').forEach(function(button) {	
 			if(!button.classList.contains(".id"+id)){
@@ -160,6 +183,20 @@ class Membership extends Component {
 					<meta property="twitter:title" content={this.state.twitter_title}></meta>
 					<meta property="twitter:description" content={this.state.twitter_description}></meta>
 			</Helmet>
+			<Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered >
+                <Modal.Body className="p-0">
+                    <button type="button" onClick={this.modalClose} class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+					
+					<p className="sub_title" >Download Brochure</p>
+					
+					<iframe height="420" width="100%" frameBorder="0" src=" https://staging-ascstaging.kinsta.cloud/gravity-membership/" title="description" />
+					
+                </Modal.Body>
+            </Modal>
 					<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 						<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 							<img alt="" className="icon" src="https://staging-ascstaging.kinsta.cloud/demo.svg" />
@@ -233,6 +270,18 @@ class Membership extends Component {
 						</Container>
 					</section>
 					<section className="Membership-section-4">
+						<Container>
+							<Row className="justify-content-center align-items-center">
+							<Col xl={8} lg={8} md={12}>
+								<div className="pl-3 pr-2">
+									<Button onClick={this.handleClick} className=" uppercase btn-sm btn-orange-large">Download Brochure</Button>
+									
+								</div>                        
+							</Col>
+							</Row>	
+						</Container>
+					</section>
+						<section className="Membership-section-4">
 						<Container>
 							<div className="Membership-section-4-data">
 							<div className="title">
