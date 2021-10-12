@@ -179,7 +179,7 @@ class Membership extends Component {
                         <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                     </button>
 					
-					<p className="sub_title" >Download Brochure</p>
+					
 					
 					<iframe height="420" width="100%" frameBorder="0" src=" https://staging-ascstaging.kinsta.cloud/gravity-membership/" title="description" />
 					
