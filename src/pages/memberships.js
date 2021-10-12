@@ -171,19 +171,7 @@ class Membership extends Component {
       return (
 			<Layout>
 				<>
-				<Helmet>
-				<title>Membership Pass - Australian Sports Camps</title>
-				<meta name="title" content={this.state.title}></meta>
-					<meta name="description" content={this.state.description}></meta>
-					<meta name="keywords" content={this.state.keywords}></meta>
-					<meta property="og:type" content="website"></meta>
-					<meta property="og:title" content={this.state.og_title}></meta>
-					<meta property="og:description" content={this.state.og_description}></meta>
-					<meta property="twitter:card" content="summary_large_image"></meta>
-					<meta property="twitter:title" content={this.state.twitter_title}></meta>
-					<meta property="twitter:description" content={this.state.twitter_description}></meta>
-			</Helmet>
-			<Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
+	      <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
             aria-labelledby="contained-modal-title-vcenter"
             centered >
                 <Modal.Body className="p-0">
@@ -197,6 +185,19 @@ class Membership extends Component {
 					
                 </Modal.Body>
             </Modal>
+				<Helmet>
+				<title>Membership Pass - Australian Sports Camps</title>
+				<meta name="title" content={this.state.title}></meta>
+					<meta name="description" content={this.state.description}></meta>
+					<meta name="keywords" content={this.state.keywords}></meta>
+					<meta property="og:type" content="website"></meta>
+					<meta property="og:title" content={this.state.og_title}></meta>
+					<meta property="og:description" content={this.state.og_description}></meta>
+					<meta property="twitter:card" content="summary_large_image"></meta>
+					<meta property="twitter:title" content={this.state.twitter_title}></meta>
+					<meta property="twitter:description" content={this.state.twitter_description}></meta>
+			</Helmet>
+			
 					<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 						<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 							<img alt="" className="icon" src="https://staging-ascstaging.kinsta.cloud/demo.svg" />
@@ -273,7 +274,7 @@ class Membership extends Component {
 						<Container>
 							<Row className="justify-content-center align-items-center">
 							<Col xl={8} lg={8} md={12}>
-								<div className="pl-3 pr-2">
+								<div className="pl-3 pr-2 text-center">
 									<Button onClick={this.handleClick} className=" uppercase btn-sm btn-orange-large">Download Brochure</Button>
 									
 								</div>                        
