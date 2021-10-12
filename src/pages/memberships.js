@@ -181,7 +181,7 @@ class Membership extends Component {
 					
 					
 					
-					<iframe height="420" width="100%" frameBorder="0" src=" https://staging-ascstaging.kinsta.cloud/gravity-membership/" title="description" />
+					<iframe height="420" width="100%" frameBorder="0" src=" http://staging-ascstaging.kinsta.cloud/gravity-membership/" title="description" />
 					
                 </Modal.Body>
             </Modal>
