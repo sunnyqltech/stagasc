@@ -70,7 +70,7 @@ class SportMenu extends Component {
 		  </ListGroup>
 		<div className="mb-3 menu-heading">
 					
-					<a className="" href="camps/asc-exploeres">Sport Explorers</a>
+					<a className="" href="/camps/asc-exploeres">Sport Explorers</a>
 				</div>	
 		  </div>
 		  <SportMenu2/>
