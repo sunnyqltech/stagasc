@@ -44,8 +44,8 @@ componentDidMount() {
   }	
 	
   render() {
-    const blog = this.props.data.allWordpressWpCpt150963
-    const blog_count = this.props.data.allWordpressWpCpt150963.edges.length;
+    const blog = this.props.data.allWordpressWpCpt150999
+    const blog_count = this.props.data.allWordpressWpCpt150999.edges.length;
    	const category = this.props.data.allWordpressCategory
    
    
