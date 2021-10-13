@@ -126,7 +126,7 @@ componentDidMount() {
 															{(prop.node.acf.active == 1) ? (
 																<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
 																	<Card className="resource-card mb-0 all">
-																		<Link to={"/flyer/"+prop.node.slug} className="card-img">
+																		<Link to={"/sport-flyer/"+prop.node.slug} className="card-img">
 																			<Image src={prop.node.acf.featured_image} fluid alt="" className="" />
 																		</Link>
 																		<Card.Body>
