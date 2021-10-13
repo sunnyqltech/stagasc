@@ -354,7 +354,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	allWordpresssportflyer.data.allWordpressWpCpt150999.edges.forEach((edge,index) => {
 		if(edge.node.acf.active == 1){
 			createPage({
-		  path: `/flyer/${edge.node.slug}/`,
+		  path: `/sport-flyer/${edge.node.slug}/`,
 		  component: slash(SflyerTemplate),
 		  context: {
 			id: edge.node.id
@@ -368,7 +368,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		createPage,
 		items: Sflyers,
 		itemsPerPage: 18,
-		pathPrefix: '/flyer',
+		pathPrefix: '/sport-flyer',
 		component: SflyerlistTemplate,
 	});
 	const products = await graphql(`
