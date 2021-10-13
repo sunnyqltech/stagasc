@@ -329,7 +329,48 @@ exports.createPages = async ({ actions, graphql }) => {
 		component: flyerlistTemplate,
 	});
 	
-	
+	const allWordpresssportflyer = await graphql(`
+		{
+			allWordpressWpCpt150999 {
+				edges {
+					node {
+						id
+						acf {
+							featured_image
+							active
+						}
+						date(formatString: "D MMMM, Y")
+						
+						slug
+						title
+						content
+					}
+				}
+			}
+		}
+	`)
+	const SflyerTemplate = path.resolve(`./src/templates/sport-flyer_details.js`);
+	const SflyerlistTemplate = path.resolve(`./src/templates/sport-flyer.js`);
+	allWordpresssportflyer.data.allWordpressWpCpt150999.edges.forEach((edge,index) => {
+		if(edge.node.acf.active == 1){
+			createPage({
+		  path: `/flyer/${edge.node.slug}/`,
+		  component: slash(SflyerTemplate),
+		  context: {
+			id: edge.node.id
+		  },
+		})	
+		} 
+		 		  
+	})
+	const flyers = allWordpresssportflyer.data.allWordpressWpCpt150999.edges;
+	paginate({
+		createPage,
+		items: flyers,
+		itemsPerPage: 18,
+		pathPrefix: '/flyer',
+		component: SflyerlistTemplate,
+	});
 	const products = await graphql(`
 		{
 			allWcProducts(filter: {categories: {elemMatch: {name: {eq: "Shop"}}}}) {
