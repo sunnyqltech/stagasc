@@ -110,6 +110,9 @@ class demopage extends Component {
 									<Nav.Item>
 										<Nav.Link href="/flyer" className="uppercase font-bold">Camp flyer</Nav.Link>
 									</Nav.Item>
+	    								<Nav.Item>
+										<Nav.Link href="/sport-flyer" className="uppercase font-bold ">Sport Flyer</Nav.Link>
+									</Nav.Item>
 								</Nav>
 							</div>
 							<Tab.Content className="text-left">
