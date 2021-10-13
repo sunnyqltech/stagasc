@@ -28,10 +28,10 @@ class BlogDetails extends Component {
 	
   render() {
   
-	const blog = this.props.data.allWordpressWpCpt150963
-	const id = this.props.data.allWordpressWpCpt150963.edges[0].node.wordpress_id
-	const sport_name = this.props.data.allWordpressWpCpt150963.edges[0].node.acf.sport_name
-	const title = this.props.data.allWordpressWpCpt150963.edges[0].node.title
+	const blog = this.props.data.allWordpressWpCpt150999
+	const id = this.props.data.allWordpressWpCpt150999.edges[0].node.wordpress_id
+	const sport_name = this.props.data.allWordpressWpCpt150999.edges[0].node.acf.sport_name
+	const title = this.props.data.allWordpressWpCpt150999.edges[0].node.title
 	 	const category = this.props.data.allWordpressCategory
    	const tags = this.props.data.allWordpressTag
 	
