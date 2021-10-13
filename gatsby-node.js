@@ -363,10 +363,10 @@ exports.createPages = async ({ actions, graphql }) => {
 		} 
 		 		  
 	})
-	const flyers = allWordpresssportflyer.data.allWordpressWpCpt150999.edges;
+	const Sflyers = allWordpresssportflyer.data.allWordpressWpCpt150999.edges;
 	paginate({
 		createPage,
-		items: flyers,
+		items: Sflyers,
 		itemsPerPage: 18,
 		pathPrefix: '/flyer',
 		component: SflyerlistTemplate,
