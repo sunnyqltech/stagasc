@@ -75,8 +75,19 @@ a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 .camptestimonialsec_logo { position: absolute; top: 100%;  right: 0; }
 
 .sec25{
-	padding-botom:25px !important;
+	padding-bottom:25px !important;
 }
+ection.Sport-details-section-2 blockquote p {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight:500;
+}
+
+@media (max-width: 767px){
+section.Sport-details-section-2 blockquote p{ font-size: 18px;
+    line-height: 30px;}
+}
+	
 
 header .main-header {
     -webkit-box-shadow: 0 0 26px -13px rgba(0, 0, 0, .6);
