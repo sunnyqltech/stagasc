@@ -89,24 +89,27 @@ class Header extends Component {
 				this.setState({ isTop })
 			}
         });
-		
+		if(document.getElementById("navResources").length > 0){
 		document.getElementById("navResources").addEventListener("click", function() {
 			document.getElementById("dmenut").classList.toggle("active"); 
 			document.getElementById("dmenut").classList.toggle("show"); 
 			document.getElementById("dmenu").classList.toggle("show"); 
 		}); 
-			
+		}	
+		if(document.getElementById("navbarDropdown").length > 0){	
 		document.getElementById("navbarDropdown").addEventListener("click", function() {
 			document.getElementById("d2menut").classList.toggle("active"); 
 			document.getElementById("d2menut").classList.toggle("show"); 
 			document.getElementById("d2menu").classList.toggle("show"); 
 		}); 
-
+		}
+	      if(document.getElementById("navCont").length > 0){
 		document.getElementById("navCont").addEventListener("click", function() {
 			document.getElementById("d3menut").classList.toggle("active"); 
 			document.getElementById("d3menut").classList.toggle("show"); 
 			document.getElementById("d3menu").classList.toggle("show"); 
-		}); 	
+		}); 
+	      }
 			
 		
 		if(window.location.href.indexOf("/camps/") > -1){
