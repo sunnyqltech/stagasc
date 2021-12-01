@@ -68,7 +68,7 @@ class Header extends Component {
 	
 	
       componentDidMount() {
-	      var url = window.location.href;
+	      var url_action = window.location.href;
 	      
 	      const cookies = new Cookies();
 		if(cookies.get('LOGIN') == 1){
@@ -78,7 +78,7 @@ class Header extends Component {
 			var login_name = "";
 		}
 		 var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/asc_page_view";
-		axios.post(url,{login_name:login_name,url:url}).then(e => {
+		axios.post(url,{login_name:login_name,url:url_action}).then(e => {
 			console.log("done");
 		})
 	      
